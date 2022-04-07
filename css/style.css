@@ -4,7 +4,7 @@ body{
 }
 @font-face {
     font-family: SFDistant-Galaxy;
-    src: url(/fonts/sf_distant_galaxy/SF\ Distant\ Galaxy.ttf);
+    src: url(..gi/fonts/sf_distant_galaxy/SF\ Distant\ Galaxy.ttf);
 }
 
 .yoda{
@@ -17,7 +17,7 @@ body{
 .vader{
     width: 60px;
     height: 60px;
-    background-image: url(/img/darth-sidious.png);
+    background-image: url(../img/darth-vader.png);
     position: absolute;
     bottom: 0;
 }
