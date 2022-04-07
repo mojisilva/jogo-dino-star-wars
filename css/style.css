@@ -4,7 +4,7 @@ body{
 }
 @font-face {
     font-family: SFDistant-Galaxy;
-    src: url(..gi/fonts/sf_distant_galaxy/SF\ Distant\ Galaxy.ttf);
+    src: url(../fonts/sf_distant_galaxy/SF-Distant-Galaxy.ttf);
 }
 
 .yoda{
