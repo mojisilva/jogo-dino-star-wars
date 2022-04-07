@@ -1,4 +1,4 @@
-const dino = document.querySelector('.dino');
+const yoda = document.querySelector('.yoda');
 const background = document.querySelector('.background');
 let isJumping = false;
 let position = 0;
@@ -12,8 +12,6 @@ function  handleKeyUp(event){
 }
 
 function jump(){
-    
-
     let upInterval = setInterval(() =>{
         if(position >= 150){
             clearInterval(upInterval); 
@@ -23,53 +21,43 @@ function jump(){
                     isJumping = false;
                 }else{
                     position -=20;
-                    dino.style.bottom = position + 'px';
+                    yoda.style.bottom = position + 'px';
                 }                
             }, 20);
         }else{
             position += 20; 
-            dino.style.bottom = position + 'px';
+            yoda.style.bottom = position + 'px';
         }
     },20);
-
 }
 
-
-
-function createCactus(){
-    const cactus = document.createElement('div');
-    let cactusPosition = 1000;
+function createVader(){
+    const vader = document.createElement('div');
+    let vaderPosition = 1000;
     let randomTime = Math.random() * 6000;
-
-
-    cactus.classList.add('cactus');
-    cactus.style.left = 1000 + 'px';
-    background.appendChild(cactus);
+    vader.classList.add('vader');
+    vader.style.left = 1000 + 'px';
+    background.appendChild(vader);
     let leftInterval = setInterval(() =>{
-
-        
-        if(cactusPosition <-60){
+        if(vaderPosition <-60){
             clearInterval(leftInterval);
-            background.removeChild(cactus);
-        }else if(cactusPosition >0 && cactusPosition <60 && position <60){
-             
+            background.removeChild(vader);
+        }else if(vaderPosition >0 && vaderPosition <60 && position <60){
             clearInterval(leftInterval);
-           gameOver();
-
-
+            gameOver();
         }else {
-            cactusPosition -=10;
-            cactus.style.left = cactusPosition + 'px';
+            vaderPosition -=10;
+            vader.style.left = vaderPosition + 'px';
         }
     },20);
-    setTimeout(createCactus, randomTime);
+    setTimeout(createVader, randomTime);
 }
 
 function gameOver(){
-    const gameOver = document.body.innerHTML = '<h1 class="game-over"><img src="img/game-over.png" alt="game-over"></h1>';
+    const gameOver = document.body.innerHTML = '<div><h1 class="game-over"><img src="img/game-over.png" alt="game-over"><div>            <button class="btn-recomecar">Play Again</button></div></h1></div>';
+    const button = document.getElementsByClassName('btn-recomecar');
 }
 
-
-createCactus();
+createVader();
 document.addEventListener('keyup', handleKeyUp);
 
