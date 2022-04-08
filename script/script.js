@@ -41,7 +41,7 @@ function jump(){
 function createVader(){
     const vader = document.createElement('div');
     let vaderPosition = 1000;
-    let randomTime = Math.random() * 10000;     
+    let randomTime = Math.random() * 8000;     
     vader.classList.add('vader');
     vader.style.left = 1000 + 'px';
     background.appendChild(vader);
