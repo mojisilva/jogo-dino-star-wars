@@ -6,7 +6,6 @@ body{
     font-family: SFDistant-Galaxy;
     src: url(../fonts/sf_distant_galaxy/SF-Distant-Galaxy.ttf);
 }
-
 .yoda{
     width: 60px;
     height: 60px;
@@ -23,6 +22,8 @@ body{
     bottom: 0;
 }
 .game-over{
+    font-family: 'SFDistant-Galaxy';
+    font-size: 70px;
     display: block;
     flex-direction: column;
     width: 100%;
@@ -50,11 +51,8 @@ body{
     width: 200px;
     height: 50px;
     color: black; 
-    margin: 0 auto;
-    
+    margin: 0 auto;    
 }
-  
-
 @keyframes slideright{
     from {
         background-position: 70000%;
@@ -63,7 +61,6 @@ body{
         background-position: 0;
     }
 }
-
 .background{
     position: absolute;
     top: 20;

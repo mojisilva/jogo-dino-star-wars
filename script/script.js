@@ -17,7 +17,6 @@ function  handleKeyUp(event){
         }
     }
 }
-
 function jump(){
     let upInterval = setInterval(() =>{
         if(position >= 150){
@@ -37,11 +36,10 @@ function jump(){
         }
     },20);
 }
-
 function createVader(){
     const vader = document.createElement('div');
     let vaderPosition = 1000;
-    let randomTime = Math.random() * 8000;     
+    let randomTime = Math.random() * 9000;     
     vader.classList.add('vader');
     vader.style.left = 1000 + 'px';
     background.appendChild(vader);
@@ -61,12 +59,8 @@ function createVader(){
     },20);
     setTimeout(createVader, randomTime);
 }
-
-
-
-
 function gameOver(){
-    const gameOver = document.body.innerHTML = '<div><h1 class="game-over"><img src="img/game-over.png" alt="game-over"><div><button class="btn-recomecar">Play Again</button></div></h1></div>';
+    const gameOver = document.body.innerHTML = '<div><h1 class="game-over">Game Over<div><button class="btn-recomecar">Play Again</button></div></h1></div>';
     const button = document.getElementsByClassName('btn-recomecar');
     button[0].addEventListener('click', () =>{
         location.reload();
